@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<div style="margin: 100px">
+    <div>
+        <h3>Добавить фотокарточку кота</h3>
+        <a href="/cat">Посмотреть добавленные фотокарточки.</a>
+        <form action="#" th:action="@{/cat}" th:object="${cat}" method="post">
+            <p>Url: <input type="text" name="url" field="*{url}" /></p>
+            <p><input type="submit" value="Добавить" /></p>
+        </form>
+    </div>
+    <div style="margin-top: 10px">
+        <h3>Добавить фотокарточку пёселя</h3>
+        <a href="/dog">Посмотреть добавленные фотокарточки.</a>
+        <form action="#" th:action="@{/dog}" th:object="${dog}" method="post">
+            <p>Url: <input type="text" name="url" field="*{url}" /></p>
+            <p><input type="submit" value="Добавить" /></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

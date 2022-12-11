@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+</head>
+<body>
+<div class="label">
+    <h1>Фотокарточки котеек.</h1>
+    <a href="/">Главная</a>
+</div>
+<div class="content">
+    <div class="content__image" th:each="url: ${urls}">
+        <img height="200px" width="200px" th:src="${url}">
+    </div>
+</div>
+</body>
+<style>
+    .label {
+        margin: auto;
+        width: 450px;
+    }
+    .content {
+        padding-top: 80px;
+        margin: auto;
+        width: 610px;
+        display: grid;
+        grid-template: repeat(2, 200px) / repeat(3, 200px);
+    }
+</style>
+</html>
